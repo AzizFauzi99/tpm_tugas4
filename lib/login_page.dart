@@ -12,8 +12,8 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  String username = '';
-  String password = '';
+  String username = 'tugastpm4';
+  String password = '12345';
 
   bool isLogin = false;
 

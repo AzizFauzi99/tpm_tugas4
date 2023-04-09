@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'daftar_anggota.dart';
 import 'aplikasi_stopwatch.dart';
+import 'Favorit.dart';
+import 'Recommended_sites.dart';
 
 class HalamanUtama extends StatefulWidget {
   const HalamanUtama({super.key});
@@ -43,16 +45,20 @@ class _HalamanUtamaState extends State<HalamanUtama> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => DaftarSitus()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WebsitePage()));
               },
               child: const Text('Daftar Situs Rekomendasi'),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => Favorite()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FavoritePage(
+                              favoriteWebsites: [],
+                            )));
               },
               child: const Text('Situs Favorit'),
             ),
